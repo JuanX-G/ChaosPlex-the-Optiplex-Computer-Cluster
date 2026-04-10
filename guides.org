@@ -1,0 +1,70 @@
+#+title: Guides and Instructions for Future Reference
+#+author: Juan_em
+
+* Setup as of '2026-02-13'
+** Controller (head)
+	- My old PC, running Rocky Linux 9
+	- Software:
+		- Warewulf
+		- Slurm 
+	- IP 192.168.0.230 (to be set to static)
+	It serves iPXE images with warewulf, as well as, in the future, being used for job submittal
+
+	- Head should have a 'mpiuser' with Uid '1100'
+** Switch
+   	- D-link web smart switch 1224TP
+   	- Configured at IP '10.90.90.90' subnet '255.255.255.0'
+ 	- Running jumboframes, thus MTU on everything should be 9000
+*** instcructions for access
+    	1. Connect a computer physically to it, any port works.
+   	2. Set the computers static IP address to '10.90.90.91' (on the interface used to connect to the switch)
+  	3. Set subnet mask to '255.255.255.0'
+  	4. In a browser enter 10.90.90.90
+    	5. Creds:	
+    		- User: admin
+ 		- Password: In pass on laptop
+
+** Nodes
+	- Each node is booteed through iPXE from the controller, they run Rocky Linxu 9 as well
+	- The warewulf image is called 'Rocky-9' NOT 'compute' or 'Rocky9'
+	- Nodes mount '/home', '/opt' through NFS (config at: /etc/exports)
+	- Each runs slurmd
+	- Each should have a 'mpiuser' with Uid '1100'
+
+	- Name in config `NodeName=nodeXY`; XY - number starting at '01' 
+*** Specs
+	- 8 GB ram --- approprieate config options:
+		- `RealMemory=6200`
+ 	- 4 cores --- approprieate config options:
+		- `ThreadsPerCore=1`
+		- `CoresPerSocket=4`
+		- `SocketsPerBoard=1`
+		- `Boards=1`
+	- 128 GB SSD
+		- `TmpDisk=80 000` 80GB scratch
+	- Arctic-MX7 paste, last replaced on: '2025-02'
+* Adding a New Node
+	0. So, you wanna add a node? let me introduce you to this fuckass process
+	1. Add the node `sudo wwctl node add <node-name> --hwaddr=<MAC addr of the node> --ipaddr=<ip-addr of the node> --container <container-name> --profile default --netname default --netdev <network interface name>` 
+		- for Optiplex 9020 the name for the on-board NIC is 'enp3s0'
+		- You must know the MAC address
+		- You must decide a static IP for it
+	2. Add a DHCP reservation and restart DHCP service (do this in dhcpcd config)
+		- Must include the proper interface name and MAC
+	3. Configure Warewulf to serve new files
+	4. Generate overlays `sudo wwctl overlay build <name of the new node>`
+	5. Again configure Warewulf to serve new files just to be sure
+	6. Restart Warewulfd
+	TODO: Make a script for it 
+* Booting Nodes
+	0. Cause it ain't as simple as it sounds
+	1. Unplug the access to the home network
+	2. reboot/turn on the nodes
+	3. Actually quite simple, but you MUST unplug the home network, otherwise the nodes will at best not find 
+		the initramfs because of fucked DHCP or not even start iPXE because DHCP race condition will fuck it up!
+	4. To work on the cluster than either:
+		- Use a USB NIC in the head (to come XD)
+ 		- Connect directly to the switch with a laptop and act like a memebr of the network
+	
+
+
