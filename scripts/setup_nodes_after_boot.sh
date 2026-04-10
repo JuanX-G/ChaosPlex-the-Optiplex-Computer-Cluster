@@ -7,7 +7,7 @@ fi
 
 #
 # Script for setting up for setting up nodes after the boot from iPXE.
-# First argument denoted the highest node number
+# First argument denotes the highest node number
 #
 
 upper_node_count=$1

@@ -36,9 +36,11 @@ Using only 1Gb is one of the biggest limiations of this setup, while currently t
 Adding more than ~8 machines will lead to noticable thrashing; so without some hacky solutions, such as directing memory access MPI peering, it will be hard to scale.
 Leaving the only simple upgrade path to be buying new NICs; however, that will be around double the whole budget so far. With the performace being satisfactory, I am not expecting to add more nodes anytime soon.
 
+## Network Diagram
+![](./figures/diagram1.png "Network diagram")
 
 ## Stats
 ### 6 machines
 ### 72 GB total ram
 ### 24C/24T
-![](./figures/photo1.jpg "a title")
+![](./figures/photo1.jpg "Cluster")
