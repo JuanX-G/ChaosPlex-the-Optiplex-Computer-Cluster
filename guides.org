@@ -44,7 +44,7 @@
 		- `TmpDisk=80 000` 80GB scratch
 	- Arctic-MX7 paste, last replaced on: '2025-02'
 * Adding a New Node
-	0. So, you wanna add a node? let me introduce you to this fuckass process
+	0. So, you wanna add a node? let me introduce you to this process
 	1. Add the node `sudo wwctl node add <node-name> --hwaddr=<MAC addr of the node> --ipaddr=<ip-addr of the node> --container <container-name> --profile default --netname default --netdev <network interface name>` 
 		- for Optiplex 9020 the name for the on-board NIC is 'enp3s0'
 		- You must know the MAC address
