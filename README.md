@@ -43,5 +43,5 @@ Leaving the only simple upgrade path to be buying new NICs; however, that will b
 ### 6 machines
 ### 72 GB total ram
 ### 24C/24T
-### Physical Cluster
+## Physical Cluster
 ![Cluster](./figures/photo1.jpg)
