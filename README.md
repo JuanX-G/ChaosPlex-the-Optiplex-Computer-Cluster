@@ -26,7 +26,7 @@ The cluster is now operational, and has already done it's first work.
 | Provisioning | Warewulf (iPXE)           |
 
 ## Network Diagram
-![](./figures/diagram1.png "Network diagram")
+![](./figures/diagram1.png)
 
 ## Physical Cluster
 ![Cluster](./figures/photo1.jpg)
