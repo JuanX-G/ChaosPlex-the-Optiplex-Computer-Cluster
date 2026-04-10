@@ -12,6 +12,9 @@ The project allowed me to learn a ton about HPC and distrubuted systems
 ## What have I achived
 The cluster is now operational, and has already done it's first work.
 
+## Network Diagram
+![](./figures/diagram1.png)
+
 ## Cluster Overview
 ### Compute nodes
 | Component    | Spec                      |
@@ -24,9 +27,6 @@ The cluster is now operational, and has already done it's first work.
 | Network      | 1 Gbps Ethernet           |
 | Scheduler    | Slurm                     |
 | Provisioning | Warewulf (iPXE)           |
-
-## Network Diagram
-![](./figures/diagram1.png)
 
 ## Physical Cluster
 ![Cluster](./figures/photo1.jpg)
