@@ -5,8 +5,6 @@
        - You must decide a static IP for it
 2. Add a DHCP reservation and restart DHCP service (do this in dhcpcd config)
        - Must include the proper interface name and MAC
-3. Configure Warewulf to serve new files
-4. Generate overlays `sudo wwctl overlay build <name of the new node>`
-5. Again configure Warewulf to serve new files just to be sure
-6. Restart Warewulfd
+3. Generate overlays `sudo wwctl overlay build <name of the new node>`
+4. Restart Warewulfd
 
