@@ -10,9 +10,9 @@ I decided to do this for two main reasons:
 The project allowed me to learn a ton about HPC and distrubuted systems
 
 ## What have I achived
-The cluster is now operational, and has already done some serious computing.
+The cluster is now operational, and has already done some serious computing. \
 I have setup Slurm and munge for job distribution and Warewulf for image provisioning.
-I repated every unit and updated the bios.
+I repasted every unit and updated the bios.
 
 ## Network Diagram
 ![](./figures/diagram1.png)
