@@ -24,11 +24,20 @@ I repated every unit and updated the bios.
 | Model        | 6x Dell Optiplex 9020 SFF |
 | CPU          | Intel i5-4570             |
 | Total Cores  | 24C / 24T                 |
-| RAM          | 72 GB total               |
-| Storage      | SATA SSDs                 |
+| RAM          | 12GB / 72 GB total        |
+| Storage      | 128GB per unit            |
 | Network      | 1 Gbps Ethernet           |
 | Scheduler    | Slurm                     |
 | Provisioning | Warewulf (iPXE)           |
+
+### Head node
+| Component    | Spec                      |
+|--------------|---------------------------|
+| CPU          | Intel i5-7400             |
+| Cores        | 4C / 4T                   |
+| RAM          | 16GB                      |
+| Storage      | 1TB                       |
+| Network      | 2 x 1Gbps Ethernet        |
 
 ## Physical Cluster
 ![Cluster](./figures/photo1.jpg)
