@@ -6,11 +6,13 @@ A diy compute cluster of 6 nodes for number crunching with MPI, based on Slurm a
 ## Why
 I decided to do this for two main reasons:
 1. I am, and was, fascinated by distributed computing and number crunching systems
-2. I has aquired 3 of the six Optiplexes reallt cheap which jump started the thing
+2. I have acquire 3 of the six Optiplexes reallt cheap which jump started the thing
 The project allowed me to learn a ton about HPC and distrubuted systems
 
 ## What have I achived
-The cluster is now operational, and has already done it's first work.
+The cluster is now operational, and has already done some serious computing.
+I have setup Slurm and munge for job distribution and Warewulf for image provisioning.
+I repated every unit and updated the bios.
 
 ## Network Diagram
 ![](./figures/diagram1.png)

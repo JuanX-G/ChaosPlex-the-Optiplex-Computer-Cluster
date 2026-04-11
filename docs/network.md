@@ -21,6 +21,10 @@ The stack is pretty simple in large part due to this being a one-man operation.
 ### Provisioning
 For this I use warewulf, it's a pretty modern and straightforward option.
 You define images, the easiest method is to get a shell into them and configure this way.
-Than, for those images you generate per-node overlays. The overlays carry everything that is node specific, some settings etc.
+Then, for those images you generate per-node overlays. The overlays carry everything that is node specific, settings dependent on the MAC adress, etc.
+
+### Job Distribution
+For distributing the actual jobs I opted for Slurm, it is the most modern option that is also comprehensive enough.
+Each node has Slurmd installed and the head runs Slurmctld. Users can queue up jobs using the `sbatch` command.
 
 
