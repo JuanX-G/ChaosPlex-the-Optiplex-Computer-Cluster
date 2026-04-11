@@ -12,6 +12,15 @@ I also opted to trun off most reliability features, such as loopback detection;
 this reduces the overhead and is plenty safe for such simple network.
 
 ## DHCP
-Because I had a hard time making the optiplexes respect a static IP, I made static allocations for them on the DHCP server side
+Because I had a hard time making the optiplexes respect a static IP, I made static allocations for them on the DHCP server side.
+This is required for proper provisioning of images from warewulf and slurm job distribution.
+
+## Stack
+The stack is pretty simple in large part due to this being a one-man operation.
+
+### Provisioning
+For this I use warewulf, it's a pretty modern and straightforward option.
+You define images, the easiest method is to get a shell into them and configure this way.
+Than, for those images you generate per-node overlays. The overlays carry everything that is node specific, some settings etc.
 
 
