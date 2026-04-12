@@ -8,7 +8,7 @@ During setup I equiped each node with 12GB of RAM and a SATA SSD
 - First, while for the 9020 a version with the Super-Multi-Threaded i5-4770 is available it is
   hard to find on auction portals and usually at least 20% more expensive. So the i5 is a middle-ground I settled on.
 - Secondly, the elephant in the room, power consumption. Note that a full consideration of that is described in the file docs/power-consumption.md
-  But in short, the machines are of most of the time being turned on only if I know I have calculations to run. So while the costs are high, this makes them berable.
+  But in short, the machines are off most of the time being turned on only if I know I have calculations to run. So while the costs are high, this makes them berable.
 
 ### Performace
 With 12GB of RAM the nodes are quite fast and do not need to use a lot of swap for most workloads
@@ -19,7 +19,7 @@ For the head node I decided to repurpose my old PC with an i5-7400 and 16GB RAM
 The machine runs rocky linux and serves as the DHCP server, iPXE image serving server, and the head-node for Slurm
 
 ## Switch
-Of course, such a setup need a network switch, I decided to go for something cheap as the NICs on the OptiPlexes can only do 1Gb anyways
+Of course, such a setup need a network switch, I decided to go for something cheap as the NICs on the OptiPlexes can only do 1Gb anyways, I settled on a used D-Link DGS-1210
 On the switch I enabled jumbo-frames for the bit of added performance as well a disabling most reliability features to reduce over head.
 
 ### Tradeoffs

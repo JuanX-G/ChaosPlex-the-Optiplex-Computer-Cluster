@@ -26,5 +26,10 @@ Then, for those images you generate per-node overlays. The overlays carry everyt
 ### Job Distribution
 For distributing the actual jobs I opted for Slurm, it is the most modern option that is also comprehensive enough.
 Each node has Slurmd installed and the head runs Slurmctld. Users can queue up jobs using the `sbatch` command.
+I use Slurm with munge for key managment as other methods of authentication are mostly depracted
+
+### Parallel Code
+I went with the simplest option, that is OpenMPI. While Intel's Implementation is often a bit faster, it is more of hassle to setup.
+So I went with the slightly simpler OpenMPI.
 
 
