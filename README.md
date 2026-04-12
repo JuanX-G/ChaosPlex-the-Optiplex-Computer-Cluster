@@ -27,8 +27,8 @@ I repasted every unit and updated the bios.
 - Worker nodes:
   - network boot via iPXE
   - managed with Warewulf
-  - run `slurmd`
-*For more details visit docs/architecture.md*
+  - run `slurmd` \
+***For more details visit docs/architecture.md**
 
 ### Network Diagram
 ![](./figures/diagram1.png)
