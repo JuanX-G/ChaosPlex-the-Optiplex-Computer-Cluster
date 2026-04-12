@@ -9,7 +9,7 @@ echo "[#] seting up munge on nodes that are currently online"
 
 upper_node_count=$1
 
-if [$NODE_NAME_ROOT = ""] ; then
+if [ $NODE_NAME_ROOT = "" ]; then
 	NODE_NAME_ROOT="node0"
 fi
 
@@ -17,7 +17,7 @@ fi
 count=1;
 while [[ $count -le $upper_node_count ]]; do
 	tmp_node_name="$NODE_NAME_ROOT""$count"
-	wwctl ssh $tmp_node_name "
+	wwctl ssh "$tmp_node_name" "
 	chown munge:munge /etc/munge/munge.key
 	chmod 400 /etc/munge/munge.key
 	chown -R munge:munge /etc/munge

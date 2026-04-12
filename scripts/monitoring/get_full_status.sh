@@ -8,6 +8,6 @@ fi
 upper_node_count=$1
 verbosity_level=$2
 
-exec ./get_jobs_status.sh
+./get_jobs_status.sh
 
-exec ./get_node_status.sh $upper_node_count $verbosty_level
+./get_node_status.sh "$upper_node_count" "$verbosity_level"

@@ -1,6 +1,6 @@
 # Hardware
 ## Compute nodes
-In my compute nodes I strived to maintain a homgenous setup, with that, because high availability I went with the
+In my compute nodes I strived to maintain a homogeneous setup, with that, because high availability I went with the
 Dell Optiplex 9020 SFF with an i5-4570
 During setup I equiped each node with 12GB of RAM and a SATA SSD
 
@@ -19,12 +19,12 @@ For the head node I decided to repurpose my old PC with an i5-7400 and 16GB RAM
 The machine runs rocky linux and serves as the DHCP server, iPXE image serving server, and the head-node for Slurm
 
 ## Switch
-Of course, such a setup need a network switch, I decided to go for something cheap as the NICs on the OptiPlexes can only do 1Gb anyways, I settled on a used D-Link DGS-1210
-On the switch I enabled jumbo-frames for the bit of added performance as well a disabling most reliability features to reduce over head.
+For the network switch, I decided to go for something cheap as the NICs on the OptiPlexes can only do 1Gb anyways, I settled on a used D-Link DGS-1210
+On the switch I enabled jumbo-frames for the bit of added performance as well a disabling most reliability features to reduce overhead.
 
 ### Tradeoffs
-Using only 1Gb is one of the biggest limiations of this setup, while currently the communication overhead is acceptable
-Adding more than ~8 machines will lead to noticable thrashing; so without some hacky solutions, such as directing memory access MPI peering, it will be hard to scale.
+Using only 1Gb connections is one of the biggest limiations of this setup, while currently the communication overhead is acceptable Adding more than ~8 machines will lead to noticable thrashing; 
+so without some hacky solutions, such as directing memory access MPI peering, it will be hard to scale.
 Leaving the only simple upgrade path to be buying new NICs; however, that will be around double the whole budget so far. With the performace being satisfactory, I am not expecting to add more nodes anytime soon.
 
 

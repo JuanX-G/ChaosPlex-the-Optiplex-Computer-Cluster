@@ -8,7 +8,7 @@ fi
 upper_node_count=$1
 verbosity_level=$2
 
-if [$NODE_NAME_ROOT = ""] ; then
+if [ "$NODE_NAME_ROOT" = "" ]; then
 	NODE_NAME_ROOT="node0"
 fi
 
@@ -21,12 +21,12 @@ scontrol show nodes
 count=1
 while [[ $count -le $upper_node_count ]]; do
 	tmp_node_name="$NODE_NAME_ROOT""$count";
-	if [[$verbosity_level; = 'V']]; then
+	if [[ $verbosity_level = 'V' ]]; then
 		wwctl ssh $tmp_node_name "
 		systemctl status slurmd
 		systemctl status munge
 		"
-	elif [[$verbosity_level = 'v']]; then
+	elif [[ $verbosity_level = 'v' ]]; then
 		wwctl ssh $tmp_node_name "
 		systemctl status slurmd
 		"

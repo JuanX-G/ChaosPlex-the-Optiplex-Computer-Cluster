@@ -21,12 +21,12 @@ The stack is pretty simple in large part due to this being a one-man operation.
 ### Provisioning
 For this I use warewulf, it's a pretty modern and straightforward option.
 You define images, the easiest method is to get a shell into them and configure this way.
-Then, for those images you generate per-node overlays. The overlays carry everything that is node specific, settings dependent on the MAC adress, etc.
+Then, for those images you generate per-node overlays. The overlays carry everything that is node specific, settings dependent on the MAC address, etc.
 
 ### Job Distribution
 For distributing the actual jobs I opted for Slurm, it is the most modern option that is also comprehensive enough.
 Each node has Slurmd installed and the head runs Slurmctld. Users can queue up jobs using the `sbatch` command.
-I use Slurm with munge for key managment as other methods of authentication are mostly depracted
+I use Slurm with munge for key managment as other methods of authentication are mostly deprecated
 
 ### Parallel Code
 I went with the simplest option, that is OpenMPI. While Intel's Implementation is often a bit faster, it is more of hassle to setup.
