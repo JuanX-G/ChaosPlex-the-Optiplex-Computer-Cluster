@@ -1,5 +1,9 @@
-# ChaosPlex the Optiplex Compute Cluster
-A diy compute cluster of 6 nodes for number crunching with MPI, based on Slurm and Warewulf
+# ChaosPlex — 6-Node DIY Compute Cluster (Slurm + MPI)
+A home-built distributed compute cluster using commodity hardware (Dell Optiplex), running Slurm for job scheduling and OpenMPI for parallel workloads.
+- 6 nodes, 24 cores total
+- 72 GB RAM
+- Warewulf-managed provisioning (iPXE boot)
+- Slurm based job managment
 
 #### Detailed Notes on Each Section are Available in /docs
 
@@ -14,8 +18,21 @@ The cluster is now operational, and has already done some serious computing. \
 I have setup Slurm and munge for job distribution and Warewulf for image provisioning.
 I repasted every unit and updated the bios.
 
-## Network Diagram
+## Simplified Architecture
+- Head node:
+  - Slurm controller (`slurmctld`)
+  - DHCP + iPXE server
+  - Warewulf provisioning
+
+- Worker nodes:
+  - network boot via iPXE
+  - managed with Warewulf
+  - run `slurmd`
+*For more details visit docs/architecture.md*
+
+### Network Diagram
 ![](./figures/diagram1.png)
+
 
 ## Cluster Overview
 ### Compute nodes
