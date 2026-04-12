@@ -28,6 +28,7 @@ I repasted every unit and updated the bios.
   - network boot via iPXE
   - managed with Warewulf
   - run `slurmd` \
+
 **For more details visit docs/architecture.md**
 
 ### Network Diagram
