@@ -44,15 +44,3 @@
 		- `TmpDisk=80 000` 80GB scratch
 	- Arctic-MX7 paste, last replaced on: '2025-02'
 	TODO: Make a script for it
-* Booting Nodes
-	0. Cause it ain't as simple as it sounds
-	1. Unplug the access to the home network
-	2. reboot/turn on the nodes
-	3. Actually quite simple, but you MUST unplug the home network, otherwise the nodes will at best not find 
-		the initramfs because of fucked DHCP or not even start iPXE because DHCP race condition will fuck it up!
-	4. To work on the cluster than either:
-		- Use a USB NIC in the head (to come XD)
- 		- Connect directly to the switch with a laptop and act like a memebr of the network
-	
-
-

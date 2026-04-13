@@ -3,17 +3,17 @@ A home-built distributed compute cluster using commodity hardware (Dell Optiplex
 - 6 nodes, 24 cores total
 - 72 GB RAM
 - Warewulf-managed provisioning (iPXE boot)
-- Slurm based job managment
+- Slurm based job management
 
 #### Detailed Notes on Each Section are Available in /docs
 
 ## Why
 I decided to do this for two main reasons:
 1. I am, and was, fascinated by distributed computing and number crunching systems
-2. I have acquire 3 of the six Optiplexes reallt cheap which jump started the thing
-The project allowed me to learn a ton about HPC and distrubuted systems
+2. I have acquire 3 of the six Optiplexes really cheap which jump started the thing
+The project allowed me to learn a ton about HPC and distributed systems
 
-## What have I achived
+## Current Status
 The cluster is now operational, and has already done some serious computing. \
 I have setup Slurm and munge for job distribution and Warewulf for image provisioning.
 I repasted every unit and updated the bios.
