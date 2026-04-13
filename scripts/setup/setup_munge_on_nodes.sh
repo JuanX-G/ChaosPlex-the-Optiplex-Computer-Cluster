@@ -1,9 +1,9 @@
 #! /bin/bash
 set -euo pipefail
-# Script to setup munge on the nodes
-# Nodes must have their munge key configured after they boot
-# it must be done munually, because who knows
-#
+# Title: Script to setup munge on the nodes
+# Desc: Sets up munge so slurm can communicate the jobs to the setup_nodes_after_boot.sh
+# Args: [first-arg]: Number of the highest node in the cluster
+# Vars: Uses the NODE_NAME_ROOT variable to determine to root from which the nodes names are derived; default value is "node0"
 
 echo "[#] seting up munge on nodes that are currently online"
 
