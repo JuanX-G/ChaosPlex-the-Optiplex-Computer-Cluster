@@ -4,7 +4,7 @@
 # Desc: Rebuilds overlays, assures NFS exports, restarts the system DHCP daemon and then restarts warewulfd
 # Args: [none]
 # Vars: [none]
-#
+
 set -euo pipefail
 
 if [[ $(/usr/bin/id -u) -ne 0 ]]; then

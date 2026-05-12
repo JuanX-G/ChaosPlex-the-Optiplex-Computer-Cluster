@@ -10,24 +10,24 @@ A home-built distributed compute cluster using commodity hardware (Dell Optiplex
 ## Why
 I decided to do this for two main reasons:
 1. I am, and was, fascinated by distributed computing and number crunching systems
-2. I have acquire 3 of the six Optiplexes really cheap which jump started the thing
+2. I have acquired 3 of the six Optiplexes really cheap which jump started the thing
 The project allowed me to learn a ton about HPC and distributed systems
 
 ## Current Status
-The cluster is now operational, and has already done some serious computing. \
+The cluster is now operational, and has already done some serious computing. 
 I have setup Slurm and munge for job distribution and Warewulf for image provisioning.
 I repasted every unit and updated the bios.
 
 ## Simplified Architecture
 - Head node:
-  - Slurm controller (`slurmctld`)
+  - Slurm controller (_slurmctld_)
   - DHCP + iPXE server
   - Warewulf provisioning
 
 - Worker nodes:
   - network boot via iPXE
   - managed with Warewulf
-  - run `slurmd` \
+  - run _slurmd_
 
 **For more details visit docs/architecture.md**
 
